@@ -1,0 +1,160 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <RootNamespace>GangstersCrimeWars</RootNamespace>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Import Include="System.Windows" />
+    <Import Include="System.Windows.Controls" />
+    <Import Include="System.Windows.Data" />
+    <Import Include="System.Windows.Documents" />
+    <Import Include="System.Windows.Input" />
+    <Import Include="System.Windows.Media" />
+    <Import Include="System.Windows.Media.Imaging" />
+    <Import Include="System.Windows.Navigation" />
+    <Import Include="System.Windows.Shapes" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Playable card art: Men (crew), Guns (weapons), Buildings (rackets) -->
+    <Content Include="_GangstersCrimeWars\WorkingArt\User Interface Elements\Decks\Cards\**\*.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Assets\Cards\%(RecursiveDir)%(Filename)%(Extension)</Link>
+    </Content>
+
+    <!-- Face-down card back -->
+    <Content Include="_GangstersCrimeWars\WorkingArt\User Interface Elements\Decks\DeckCover\BackCard.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Assets\DeckBack.png</Link>
+    </Content>
+
+    <!-- Title banner and how-to-play -->
+    <Content Include="_GangstersCrimeWars\IntroTitleImages\IntroBannerGangsterCrimeWars.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Assets\Banner.png</Link>
+    </Content>
+    <Content Include="_GangstersCrimeWars\IntroTitleImages\WayToPlayGangsterCrimeWars.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Assets\HowToPlay.png</Link>
+    </Content>
+
+    <!-- Table background texture -->
+    <Content Include="_GangstersCrimeWars\WorkingArt\User Interface Elements\Background\background_canvas_folder.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Assets\TableBackground.jpg</Link>
+    </Content>
+
+    <!-- Iconic boss name banners, assigned to players at the start of a war -->
+    <Content Include="_GangstersCrimeWars\WorkingArt\User Interface Elements\PNG Text\Gangsters names Png Text\**\*.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Assets\BossNames\%(Filename)%(Extension)</Link>
+    </Content>
+
+    <!-- Decorative section header graphics -->
+    <Content Include="_GangstersCrimeWars\WorkingArt\User Interface Elements\PNG Text\MainMenu Text items Png Text\MenuTextRecruit.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Assets\Headers\Recruit.png</Link>
+    </Content>
+    <Content Include="_GangstersCrimeWars\WorkingArt\User Interface Elements\PNG Text\MainMenu Text items Png Text\MenuTextCityBuildings.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Assets\Headers\CityBuildings.png</Link>
+    </Content>
+    <Content Include="_GangstersCrimeWars\WorkingArt\User Interface Elements\PNG Text\MainMenu Text items Png Text\MenuTextGangsters.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Assets\Headers\Gangsters.png</Link>
+    </Content>
+
+    <!-- Small UI icons -->
+    <Content Include="_GangstersCrimeWars\WorkingArt\User Interface Elements\UI Eleements\SackOfCash.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Assets\Icons\Cash.png</Link>
+    </Content>
+    <Content Include="_GangstersCrimeWars\WorkingArt\User Interface Elements\UI Eleements\RedBar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Assets\Icons\LifeBar.png</Link>
+    </Content>
+    <Content Include="_GangstersCrimeWars\WorkingArt\User Interface Elements\UI Eleements\The Mafia Gangster Logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Assets\Logo.png</Link>
+    </Content>
+
+    <!-- Custom display font (internal family name confirmed as "Bootleggers") -->
+    <Content Include="_GangstersCrimeWars\WorkingArt\Fonts to use\Bootleggers.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Assets\Fonts\Bootleggers.otf</Link>
+    </Content>
+
+    <!-- Background music -->
+    <Content Include="_GangstersCrimeWars\MusicSFX\GameMusic_GangstersCrimeWars.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Assets\Music\GameMusic.wav</Link>
+    </Content>
+
+    <!-- Territory map backdrop -->
+    <Content Include="_GangstersCrimeWars\WorkingArt\User Interface Elements\NYC Map\NYC_Map.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Assets\Map.jpg</Link>
+    </Content>
+
+    <!-- Empty inventory slot placeholder -->
+    <Content Include="_GangstersCrimeWars\WorkingArt\User Interface Elements\Items Icons\BLANKemptySlot.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Assets\Icons\EmptySlot.png</Link>
+    </Content>
+
+    <!-- Boss character art, paired randomly with a name banner each war -->
+    <Content Include="_GangstersCrimeWars\WorkingArt\Images To Use\bossA.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Assets\BossPortraits\bossA.png</Link>
+    </Content>
+    <Content Include="_GangstersCrimeWars\WorkingArt\Images To Use\bossB.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Assets\BossPortraits\bossB.png</Link>
+    </Content>
+    <Content Include="_GangstersCrimeWars\WorkingArt\Images To Use\BossC.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Assets\BossPortraits\BossC.png</Link>
+    </Content>
+    <Content Include="_GangstersCrimeWars\WorkingArt\Images To Use\BossD.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Assets\BossPortraits\BossD.png</Link>
+    </Content>
+
+    <!-- Dialog frame for popup windows -->
+    <Content Include="_GangstersCrimeWars\WorkingArt\User Interface Elements\UI Eleements\DiaologBox.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Assets\DialogBox.png</Link>
+    </Content>
+
+    <!-- Newspaper backdrop for the event log -->
+    <Content Include="_GangstersCrimeWars\WorkingArt\Images To Use\MafiaTimesNewspaper.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Assets\Newspaper.png</Link>
+    </Content>
+
+    <!-- Action point pips -->
+    <Content Include="_GangstersCrimeWars\WorkingArt\User Interface Elements\UI Eleements\GreenDot.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Assets\Icons\ApReady.png</Link>
+    </Content>
+    <Content Include="_GangstersCrimeWars\WorkingArt\User Interface Elements\UI Eleements\RedDot.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Assets\Icons\ApSpent.png</Link>
+    </Content>
+
+    <!-- Additional market section headers -->
+    <Content Include="_GangstersCrimeWars\WorkingArt\User Interface Elements\PNG Text\MainMenu Text items Png Text\MenuTextBootlegging.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Assets\Headers\Bootlegging.png</Link>
+    </Content>
+    <Content Include="_GangstersCrimeWars\WorkingArt\User Interface Elements\PNG Text\MainMenu Text items Png Text\MenuTextNewspaper.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Assets\Headers\Newspaper.png</Link>
+    </Content>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,16 @@
+<Window x:Class="HowToPlayWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:GangstersCrimeWars"
+        Title="How To Play" Height="720" Width="920" Background="#0B0B0D" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <Image x:Name="FrameImage" Stretch="Fill"/>
+        <DockPanel Margin="34">
+            <Button DockPanel.Dock="Bottom" Content="CLOSE" Width="120" Height="34" Margin="0,10,0,0"
+                    HorizontalAlignment="Center" Click="CloseButton_Click"/>
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                <Image x:Name="HowToPlayImage" Stretch="Uniform"/>
+            </ScrollViewer>
+        </DockPanel>
+    </Grid>
+</Window>

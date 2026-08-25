@@ -1,0 +1,24 @@
+## .NET / Visual Studio
+bin/
+obj/
+_GangstersCrimeWars/
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Bb]uild/
+
+## Rider / VS Code
+.idea/
+.vscode/
+
+## OS files
+Thumbs.db
+.DS_Store
